@@ -10,8 +10,11 @@ namespace HotelManagementSystemApplication.Data
 
         }
         public DbSet<HotelRoomDetails> HotelRoomDetails { get; set; }
-        public DbSet<ClientBookingLog> ClientBookingLog { get; set; }
+        public DbSet<ClientBooking> ClientBooking { get; set; }
         public DbSet<UserRole> UserRole { get; set; }
         public DbSet<GuestRole> GuestRole { get; set; }
+        public DbSet<AdminRole> AdminRole { get; set; }
+        public DbSet<ClientHotelBooking> ClientHotelBooking { get; set; }
+
     }
 }

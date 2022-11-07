@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 function NavBar(){
     return (
             <div className='container' style={{backgroundColor: "black" , marginTop: "0px", paddingTop : "0px"}}>
@@ -13,7 +14,7 @@ function NavBar(){
                             <button>Gallery</button>&nbsp;&nbsp;&nbsp;
                             <button>Services</button>&nbsp;&nbsp;&nbsp;
                             <button>AboutUs</button>&nbsp;&nbsp;&nbsp;
-                            <button>Admin Login</button>
+                            <NavLink to="/signup" className="btn btn-primary">Login/SignUp</NavLink>
                         </div>
                     </span>
                 </span>

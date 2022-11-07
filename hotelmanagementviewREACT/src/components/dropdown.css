@@ -56,3 +56,35 @@
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
+
+  @media (min-width: 992px){
+    .col-lg-3{
+      float: left;
+      position: relative;
+      width: 30%;
+      text-decoration-color: black;
+      margin-left: 2%;
+    }
+  }
+  @media (min-width: 768px ) and (max-width: 991px){
+    .col-md-2,.col-md-1{
+      float: left;
+      position: relative;
+      text-decoration-color: black;
+      
+    }
+    .col-md-2{
+      width: 50%;
+    }
+    .col-md-1{
+      width: 100%;
+    }
+  }
+  @media (max-width: 767px ){
+    .col-sm-1{
+      float: left;
+      position: relative;
+      width: 100%;
+      text-decoration-color: black;
+    }
+  }

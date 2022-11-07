@@ -15,18 +15,24 @@ namespace HotelManagementSystemApplication.Controllers
         }
 
         [HttpGet]
-        public IActionResult LoginValidate(string username, string password)
+        public ActionResult<int> LoginValidate(string username, string password)
         {
-            var name = from val in _myDbContext.UserRole where val.UserName == username && val.Password == password select val.FullName;
-            if(name != null)
+            foreach(var val in _myDbContext.UserRole)
             {
-                return Ok("Login Successfull !!");
+                if(val.UserName == username)
+                {
+                    if(val.Password == password)
+                    {
+                        return val.Id;
+                    }
+                    else
+                    {
+                        return BadRequest("Password Incorrect!");
+                    }
+                }
             }
-            return NotFound();
+            return NotFound();   
         }
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
+
     }
 }
